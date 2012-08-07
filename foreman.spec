@@ -349,6 +349,7 @@ install -Dp -m0755 foreman.init %{buildroot}%{_initrddir}/%{name}
 install -Dp -m0644 %{confdir}/logrotate %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 
 cp -p -r app bundler.d config config.ru extras Gemfile lib Rakefile script %{buildroot}%{_datadir}/%{name}
+ls %{buildroot}%{_datadir}/%{name}/config/
 #chmod a+x %{buildroot}%{_datadir}/%{name}/script/{console,dbconsole,runner}
 rm -rf %{buildroot}%{_datadir}/%{name}/extras/{jumpstart,spec}
 # remove all test units from productive release
@@ -358,7 +359,6 @@ find %{buildroot}%{_datadir}/%{name} -type d -name "test" |xargs rm -rf
 mv %{buildroot}%{_datadir}/%{name}/config/database.yml.example %{buildroot}%{_datadir}/%{name}/config/database.yml
 mv %{buildroot}%{_datadir}/%{name}/config/email.yaml.example %{buildroot}%{_datadir}/%{name}/config/email.yaml
 
-cp config/settings.yaml %{buildroot}%{_datadir}/%{name}/config/
 for i in database.yml email.yaml settings.yaml; do
 mv %{buildroot}%{_datadir}/%{name}/config/$i %{buildroot}%{_sysconfdir}/%{name}
 ln -sv %{_sysconfdir}/%{name}/$i %{buildroot}%{_datadir}/%{name}/config/$i
