@@ -9,7 +9,7 @@ Summary:Systems Management web application
 Group:  Applications/System
 License:GPLv3+
 URL: http://theforeman.org
-Source0: http://github.com/ohadlevy/%{name}/tarball/%{name}-%{version}.tar.bz2
+Source0: http://github.com/ohadlevy/%{name}/tarball/%{name}-%{version}.tar.gz
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
