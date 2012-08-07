@@ -1,0 +1,7 @@
+<% title "All Puppet Classes for #{@host}" %>
+<ul>
+  <% @host.classes_from_storeconfigs.each do |klass| -%>
+    <li><%= h klass %></li>
+  <% end -%>
+</ul>
+<%= link_to 'back', host_path(@host) %>

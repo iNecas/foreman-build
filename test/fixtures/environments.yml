@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+production:
+  name: production
+  puppetclasses: one
+
+global_puppetmaster:
+  name: global_puppetmaster
+
+testing:
+  name: testing

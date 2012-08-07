@@ -1,0 +1,6 @@
+<% title "Audits" %>
+
+<%= render :partial => 'list', :locals =>{:audits => @audits}%>
+
+<%= page_entries_info @audits %>
+<%= will_paginate @audits %>

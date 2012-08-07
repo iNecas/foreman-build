@@ -1,0 +1,21 @@
+<% title "Settings" %>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th><%= sort :name %></th>
+    <th>Value</th>
+    <th>Description</th>
+    <th><%= sort :category %></th>
+  </tr>
+  <% for setting in @settings %>
+    <tr class="<%= cycle("even", "odd") -%>">
+      <td><%=h setting.name %></td>
+      <td class="setting_value"><%= value(setting) %></td>
+      <td><%=h setting.description %></td>
+      <td><%=h setting.category %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= page_entries_info @settings %>
+<%= will_paginate     @settings %>

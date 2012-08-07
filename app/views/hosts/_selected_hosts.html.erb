@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="span8">
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th> Name </th>
+          <th> Hostgroup </th>
+          <th> Environment </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% hosts.each do |host| -%>
+          <tr class="<%= cycle("even", "odd") -%>">
+            <td><%=h host %> </td>
+            <td><%=h host.try(:hostgroup) %></td>
+            <td><%=h host.try(:environment) %></td>
+          </tr>
+        <% end -%>
+      </tbody>
+    </table>
+  </div>
+</div>
