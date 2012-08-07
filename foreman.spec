@@ -10,7 +10,6 @@ Group:  Applications/System
 License:GPLv3+
 URL: http://theforeman.org
 Source0: http://github.com/ohadlevy/%{name}/tarball/%{name}-%{version}.tar.bz2
-Patch2: 0002-foreman-remove-git-refs-from-gemfiles.patch
 Patch3: 0003-foreman-mv-settings-into-place.patch
 
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -335,7 +334,6 @@ plugins required for Foreman to work.
 
 %prep
 %setup -q -n %{name}
-%patch2 -p1
 %patch3 -p1 
 
 %build
