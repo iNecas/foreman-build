@@ -357,6 +357,8 @@ find %{buildroot}%{_datadir}/%{name} -type d -name "test" |xargs rm -rf
 # Move config files to %{_sysconfdir}
 mv %{buildroot}%{_datadir}/%{name}/config/database.yml.example %{buildroot}%{_datadir}/%{name}/config/database.yml
 mv %{buildroot}%{_datadir}/%{name}/config/email.yaml.example %{buildroot}%{_datadir}/%{name}/config/email.yaml
+
+cp config/settings.yaml %{buildroot}%{_datadir}/%{name}/config/
 for i in database.yml email.yaml settings.yaml; do
 mv %{buildroot}%{_datadir}/%{name}/config/$i %{buildroot}%{_sysconfdir}/%{name}
 ln -sv %{_sysconfdir}/%{name}/$i %{buildroot}%{_datadir}/%{name}/config/$i
