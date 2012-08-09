@@ -3,7 +3,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:2%{dist}
+Release:1%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
