@@ -3,7 +3,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:2%{dist}
+Release:3%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -462,6 +462,12 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-3
+- remove debug print (msuchy@redhat.com)
+- add config/settings.yaml (msuchy@redhat.com)
+- remove config/settings.yaml from .gitignore (msuchy@redhat.com)
+- top dir of tar.gz is name-version (msuchy@redhat.com)
+
 * Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-2
 - rebuild 
 
