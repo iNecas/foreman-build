@@ -4,7 +4,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:4%{foreman_hash}%{dist}
+Release:5%{foreman_hash}%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -467,6 +467,9 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-5.6e92e9a
+- allow to build foreman for both ruby 1.8 and 1.9.1 (msuchy@redhat.com)
+
 * Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-4.6e92e9a
 - show from which git hash we build it (msuchy@redhat.com)
 
