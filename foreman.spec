@@ -42,7 +42,7 @@ Requires: rubygem(scoped_search) >= 2.3.7
 Requires: rubygem(net-ldap)
 Requires: rubygem(safemode) >= 1.0.1
 Requires: rubygem(uuidtools)
-Requires: rubygem(rake) >= 0.9.2.2
+Requires: rubygem(rake) >= 0.8.3 
 Requires: rubygem(ruby_parser) >= 2.3.1
 Requires: rubygem(audited-activerecord) >= 3.0.0
 Provides: %{name}-%{version}-%{release}
