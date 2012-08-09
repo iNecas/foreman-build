@@ -1,9 +1,10 @@
 %global homedir %{_datadir}/%{name}
 %global confdir extras/spec
+%global foreman_hash .6e92e9a
 
 Name:   foreman
 Version:1.0.0
-Release:3%{dist}
+Release:3%{foreman_hash}%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
