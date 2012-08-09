@@ -3,7 +3,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:1%{dist}
+Release:2%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -463,6 +463,9 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-2
+- rebuild 
+
 * Sun Aug 05 2012 jmontleo@redhat.com 1.0.0-2
 - Update to pull in fixes
 * Mon Jul 23 2012 jmontleo@redhat.com 1.0.0-1
