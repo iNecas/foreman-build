@@ -4,7 +4,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:3%{foreman_hash}%{dist}
+Release:4%{foreman_hash}%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -463,6 +463,9 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-4.6e92e9a
+- show from which git hash we build it (msuchy@redhat.com)
+
 * Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-3
 - remove debug print (msuchy@redhat.com)
 - add config/settings.yaml (msuchy@redhat.com)
