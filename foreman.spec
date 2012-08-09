@@ -349,7 +349,6 @@ install -Dp -m0755 foreman.init %{buildroot}%{_initrddir}/%{name}
 install -Dp -m0644 %{confdir}/logrotate %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 
 cp -p -r app bundler.d config config.ru extras Gemfile lib Rakefile script %{buildroot}%{_datadir}/%{name}
-ls %{buildroot}%{_datadir}/%{name}/config/
 #chmod a+x %{buildroot}%{_datadir}/%{name}/script/{console,dbconsole,runner}
 rm -rf %{buildroot}%{_datadir}/%{name}/extras/{jumpstart,spec}
 # remove all test units from productive release
