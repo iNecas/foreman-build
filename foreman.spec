@@ -4,7 +4,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:5%{foreman_hash}%{dist}
+Release:6%{foreman_hash}%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -467,6 +467,10 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-6.6e92e9a
+- foreman will work even with rake >= 0.8.3 (msuchy@redhat.com)
+- foreman will work even with rails >= 3.0.10 (msuchy@redhat.com)
+
 * Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-5.6e92e9a
 - allow to build foreman for both ruby 1.8 and 1.9.1 (msuchy@redhat.com)
 
