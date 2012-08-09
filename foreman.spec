@@ -16,7 +16,11 @@ BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:  noarch
 
+%if 0%{?rhel} == 6 || 0%{?fedora} < 17
 Requires: ruby(abi) = 1.8
+%else
+Requires: ruby(abi) = 1.9.1
+%endif
 Requires: rubygems
 Requires: facter
 Requires: puppet >= 0.24.4
