@@ -34,7 +34,6 @@ Requires: rubygem(json)
 Requires: rubygem(rails) >= 3.0.10
 Requires: rubygem(jquery-rails)
 Requires: rubygem(rest-client)
-Requires: rubygem(acts_as_audited) = 2.0.0
 Requires: rubygem-has_many_polymorphs >= 3.0.0.beta1-3
 Requires: rubygem(will_paginate) >= 3.0.2
 Requires: rubygem(ancestry) >= 1.2.4
