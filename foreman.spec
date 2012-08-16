@@ -1,6 +1,6 @@
 %global homedir %{_datadir}/%{name}
 %global confdir extras/spec
-%global foreman_hash .6e92e9a
+%global foreman_hash .160e109a
 
 Name:   foreman
 Version:1.0.0
