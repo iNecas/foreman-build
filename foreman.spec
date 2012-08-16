@@ -4,7 +4,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:6%{foreman_hash}%{dist}
+Release:7%{foreman_hash}%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -467,6 +467,69 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Thu Aug 16 2012 Ivan Necas <inecas@redhat.com> 1.0.0-7.160e109a
+- merging recent foreman/develop (inecas@redhat.com)
+- Merge remote-tracking branch 'foreman/develop' (inecas@redhat.com)
+- config templates minor sql improvments (ohadlevy@gmail.com)
+- api v1 - config templates (ohadlevy@gmail.com)
+- api v1 - added media and dashboard controllers (ohadlevy@gmail.com)
+- fix smartvar api output (ohadlevy@gmail.com)
+- refs #1556 Removed .id2name from env variable. (llowder@oreillyauto.com)
+- fixes #1820 - Authenticate API calls via REMOTE_USER
+  (nacho.barrientos@cern.ch)
+- Quote 'epel' - snippet name. (endre.karlson@gmail.com)
+- fixes #1793 - Better handle case when a domain has no DNS proxy set
+  (ohadlevy@gmail.com)
+- ensures that progress bar json encoding does not contain the object itself
+  (ohadlevy@gmail.com)
+- [UI] Fixed inconsistent tab naming for the initially active tab
+  (sam@kottlerdevelopment.com)
+- api v1 - OAuth user mapping (pchalupa@redhat.com)
+- fixes #1799 moved REMOTE_ADDR verification to settings (admin@cyberkov.at)
+- use safer method constantize instead of eval (ohadlevy@gmail.com)
+- Fixed tiny typo in the hostgroup unit test (sam@kottlerdevelopment.com)
+- Fixes #1789 - Parent hostgroup name is truncated when its sub-group is a sub-
+  string of the parent hostgroup name (sam@kottlerdevelopment.com)
+- fixes #1781 - clone host can fail (abenari@redhat.com)
+- fixes #1778 - Provisioning Templates editor does not always save
+  (abenari@redhat.com)
+- Fixes #1780 - changes EPEL url from download.fedoraproject.org to
+  dl.fedoraproject.org (sam@kottlerdevelopment.com)
+- fixes #1792 - error on json output of usergroups (ohadlevy@gmail.com)
+- added a scope per proxy feature (ohadlevy@gmail.com)
+- corrected routes DSL (ohadlevy@gmail.com)
+- minor cleanups for cache invalidations (ohadlevy@gmail.com)
+- fixes #1783 - Default template set  incorrect snippet names if snippet name
+  uses underscore (dswift@pccowboy.com)
+- fixes #1781 - clone host can fail (ohadlevy@gmail.com)
+- fixes #1778 - Provisioning Templates editor does not always save
+  (ohadlevy@gmail.com)
+- make sure usernames are not in the logs (ohadlevy@gmail.com)
+- fixes #1576 - api v1 - oauth support (pchalupa@redhat.com)
+- [SQL optimizations] - many small optimizations (ohadlevy@gmail.com)
+- ensures that auto completer for users search works even when you are not an
+  admin (ohadlevy@gmail.com)
+- ensure no extra white spaces are added to the provisioning templates editor
+  (ohadlevy@gmail.com)
+- Openstack uses username/password. (steve.traylen@cern.ch)
+- [API] - minor fixes (ohadlevy@gmail.com)
+- api v1 - Users controller and tests (mbacovsk@redhat.com)
+- api v1 - restapi renamed to apipie (mbacovsk@redhat.com)
+- api v1 - render home#index links from restapi (pchalupa@redhat.com)
+- api v1 - render errors with rabl (pchalupa@redhat.com)
+- split api routes to separate routes file (corey@logicminds.biz)
+- api v1 - fixing permissions (git@pitr.ch)
+- cleanup after merge conflict with latest develop branch (ohadlevy@gmail.com)
+- api v1 - tests for operating systems controller (tstrachota@redhat.com)
+- api v1 - architectures controler and tests (mbacovsk@redhat.com)
+- api v1 - Authorization (tstrachota@redhat.com)
+- api v1 - operatingsystems controller (tstrachota@redhat.com)
+- Fixed error handling in BaseController (mbacovsk@redhat.com)
+- Fixed bookmark tests (API v1) (mbacovsk@redhat.com)
+- added architectures controller in v1 API (mbacovsk@redhat.com)
+- api v1 - fisrt version of bookmarks controller (tstrachota@redhat.com)
+- fixes #1775 - API versioning name space (ohadlevy@gmail.com)
+
 * Thu Aug 09 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-6.6e92e9a
 - foreman will work even with rake >= 0.8.3 (msuchy@redhat.com)
 - foreman will work even with rails >= 3.0.10 (msuchy@redhat.com)
