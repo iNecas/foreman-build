@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'ap'
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
@@ -23,12 +24,16 @@ class ActiveSupport::TestCase
     SETTINGS[:login] ? {:user => User.find_by_login("admin").id, :expires_at => 5.minutes.from_now} : {}
   end
 
-  def as_admin
+  def as_user user
     saved_user   = User.current
-    User.current = users(:admin)
+    User.current = users(user)
     result = yield
     User.current = saved_user
     result
+  end
+
+  def as_admin &block
+    as_user :admin, &block
   end
 
   def unattended?
