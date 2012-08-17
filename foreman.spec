@@ -4,7 +4,7 @@
 
 Name:   foreman
 Version:1.0.0
-Release:7%{foreman_hash}%{dist}
+Release:8%{foreman_hash}%{dist}
 Summary:Systems Management web application
 
 Group:  Applications/System
@@ -466,6 +466,10 @@ if [ $1 -ge 1 ] ; then
 fi
 
 %changelog
+* Fri Aug 17 2012 Miroslav Suchý <msuchy@redhat.com> 1.0.0-8.160e109a
+- remove acts_as_audited dependency (inecas@redhat.com)
+- add releaser.conf (msuchy@redhat.com)
+
 * Thu Aug 16 2012 Ivan Necas <inecas@redhat.com> 1.0.0-7.160e109a
 - merging recent foreman/develop (inecas@redhat.com)
 - Merge remote-tracking branch 'foreman/develop' (inecas@redhat.com)
